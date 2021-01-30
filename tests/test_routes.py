@@ -15,7 +15,7 @@ def test_hello_world():
 
   response = client.get(url)
   print(response.get_data())
-  assert response.get_data() == 'Hello, World!'
+  assert response.get_data() == b'Hello, World!'
   assert response.status_code == 200
 
 def test_404():
@@ -26,5 +26,5 @@ def test_404():
 
   response = client.get(url)
   print(response.get_data())
-  assert response.get_data() == '404'
+  assert response.get_data() == b'404'
   assert response.status_code == 200
