@@ -12,3 +12,14 @@ python3 app.py
 # Deactivate virtual env.
 source deactivate
 ```
+
+## Running Tests and Checkstyle
+
+```python
+# Running tests
+python3 -m pytest
+
+# Running Checkstyle
+python3 -m pycodestyle tests app.py
+
+```
