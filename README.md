@@ -20,6 +20,6 @@ source deactivate
 python3 -m pytest
 
 # Running Checkstyle
-python3 -m pycodestyle tests app.py
+python3 -m pycodestyle --ignore=E402,E101 tests app.py
 
 ```
