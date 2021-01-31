@@ -1,4 +1,6 @@
 venv
 __pycache__
 venv/Lib
-pyvenv.cfg
+app.pyc
+.vscode
+.pytest_cache
