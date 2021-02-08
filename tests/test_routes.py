@@ -1,7 +1,7 @@
 import sys
 from flask import Flask
 sys.path.append('.')
-from app import configure_routes
+from routes import configure_routes
 import json
 
 

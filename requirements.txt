@@ -2,3 +2,4 @@ flask
 gunicorn
 pytest
 pycodestyle
+pymongo[srv]
