@@ -31,3 +31,4 @@ def test_404():
     print(response.get_data())
     assert response.get_data() == b'404'
     assert response.status_code == 200
+
