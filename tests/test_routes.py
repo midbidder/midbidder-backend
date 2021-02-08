@@ -5,6 +5,7 @@ from app import configure_routes
 import json
 from flask_cors import CORS
 
+
 def test_hello_world():
     app = Flask(__name__)
     cors = CORS(app, resources={r"*": {"origins": "*"}})
@@ -31,4 +32,3 @@ def test_404():
     print(response.get_data())
     assert response.get_data() == b'404'
     assert response.status_code == 200
-
