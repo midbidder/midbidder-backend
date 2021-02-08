@@ -1,19 +1,19 @@
+from flask import request
 from pymongo import MongoClient
-import os
 from dotenv import load_dotenv
 from google.oauth2 import id_token
 from google.auth.transport import requests
-
-
-#load_dotenv()
+import os
 
 client = MongoClient(os.getenv('DATABASE_CONNECTION_STRING'))
 db = client['midbidder_backend']
 
+load_dotenv()
+
 def configure_routes(app):
     @app.route('/', methods=['GET'])
     def hello_world():
-        print("Hello World")
+        app.logger.info("This is the home page")
         return 'Hello, World!!'
 
     @app.route('/404')
@@ -31,5 +31,5 @@ def configure_routes(app):
         else:
             return "Did not get Data"
 
-    if __name__ == "__main__":
+    if __name__ == "routes":
         app.run(debug=True, port=5000)
