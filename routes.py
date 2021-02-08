@@ -14,7 +14,7 @@ def configure_routes(app):
     @app.route('/', methods=['GET'])
     def hello_world():
         app.logger.info("This is the home page")
-        return 'Hello, World!!'
+        return 'Hello, World!'
 
     @app.route('/404')
     def route_404():
@@ -30,6 +30,3 @@ def configure_routes(app):
             return userid
         else:
             return "Did not get Data"
-
-    if __name__ == "routes":
-        app.run(debug=True, port=5000)
