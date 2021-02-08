@@ -1,14 +1,11 @@
 from flask import request
 from pymongo import MongoClient
-from dotenv import load_dotenv
 from google.oauth2 import id_token
 from google.auth.transport import requests
 import os
 
 client = MongoClient(os.getenv('DATABASE_CONNECTION_STRING'))
 db = client['midbidder_backend']
-
-load_dotenv()
 
 def configure_routes(app):
     @app.route('/', methods=['GET'])
