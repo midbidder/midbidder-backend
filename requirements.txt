@@ -2,3 +2,8 @@ flask
 gunicorn
 pytest
 pycodestyle
+logging
+os
+flask_cors
+google-auth-httplib2
+google-auth-oauthlib
