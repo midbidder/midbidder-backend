@@ -1,9 +1,16 @@
 from flask import Flask
-from flask_cors import CORS
-from routes import configure_routes
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"*": {"origins": "*"}})
 
-configure_routes(app)
 
+def configure_routes(app):
+    @app.route('/')
+    def hello_world():
+        return 'Hello, World!'
+
+    @app.route('/404')
+    def route_404():
+        return '404'
+
+    if __name__ == "__main__":
+        app.run(debug=True)
