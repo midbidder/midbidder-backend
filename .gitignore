@@ -4,3 +4,5 @@ venv/Lib
 app.pyc
 .vscode
 .pytest_cache
+htmlcov
+.coverage
