@@ -7,3 +7,4 @@ google-auth-httplib2
 google-auth-oauthlib
 pymongo[srv]
 dnspython
+dnspython
