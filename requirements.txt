@@ -3,3 +3,4 @@ gunicorn
 pytest
 pycodestyle
 coverage
+pymongo[srv]
