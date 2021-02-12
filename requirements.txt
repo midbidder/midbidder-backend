@@ -2,5 +2,9 @@ flask
 gunicorn
 pytest
 pycodestyle
-coverage
+flask_cors
+google-auth-httplib2
+google-auth-oauthlib
 pymongo[srv]
+dnspython
+dnspython

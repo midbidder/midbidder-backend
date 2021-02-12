@@ -3,10 +3,12 @@ from flask import Flask
 sys.path.append('.')
 from app import configure_routes
 import json
+from flask_cors import CORS
 
 
 def test_hello_world():
     app = Flask(__name__)
+    cors = CORS(app, resources={r"*": {"origins": "*"}})
     configure_routes(app)
     client = app.test_client()
     url = '/'
@@ -19,6 +21,7 @@ def test_hello_world():
 
 def test_404():
     app = Flask(__name__)
+    cors = CORS(app, resources={r"*": {"origins": "*"}})
     configure_routes(app)
     client = app.test_client()
     url = '/404'
