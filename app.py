@@ -3,6 +3,7 @@ import os
 client = MongoClient(os.getenv('DATABASE_CONNECTION_STRING'))
 db = client['midbidder_backend']
 
+
 def configure_routes(app):
     @app.route('/')
     def hello_world():
@@ -14,4 +15,3 @@ def configure_routes(app):
 
     if __name__ == "__main__":
         app.run(debug=True)
-
